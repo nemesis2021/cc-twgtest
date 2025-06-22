@@ -1,0 +1,50 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    sans-serif;
+}
+
+body {
+  transition: background-color 0.8s ease-in-out;
+}
+
+body::before{
+  content: "";
+  position: fixed; 
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  background: radial-gradient(50% 50% at 50% 50%, #ffffff64 0%, #ffffff00 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'AG Book Rounded Bold';
+  src:
+    local('AG Book Rounded Bold'),
+    url('../assets/fonts/AGBookRounded-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'AG Book Rounded Regular';
+  src:
+    local('AG Book Rounded Regular'),
+    url('../assets/fonts/AGBookRounded-Regular.otf') format('opentype');
+}
