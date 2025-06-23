@@ -52,6 +52,6 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props,
     notFound: page === null,
-    revalidate: REVALIDATE_PAGES,
+    
   };
 };
