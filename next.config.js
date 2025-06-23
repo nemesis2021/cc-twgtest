@@ -3,10 +3,8 @@ const nextConfig = {
   output: 'export',
   distDir: 'out', // Optional: explicitly set output directory
   trailingSlash: true,
-  images: {
-    unoptimized: true
 
-  
+
 images: {
     remotePatterns: [
       {
