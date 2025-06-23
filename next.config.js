@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  devIndicators: false,
-
   output: 'export',
+  distDir: 'out', // Optional: explicitly set output directory
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+
   
 images: {
     remotePatterns: [
