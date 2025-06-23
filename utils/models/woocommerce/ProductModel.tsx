@@ -53,7 +53,7 @@ export interface ProductPartialModel {
 export enum ProductInfoBlockTypeEnum {
   ListBlock = 'ProductFieldsProductInfoListBlockLayout',
   FreeTextBlock = 'ProductFieldsProductInfoFreeTextBlockLayout',
-  TableBlock = 'ProductFieldsProductInfoBlockTableLayout', // Corrected identifier name
+  BlockTable = 'ProductFieldsProductInfoBlockTableLayout', // Corrected identifier name
   EquationBlock = 'ProductFieldsProductInfoEquationBlockLayout',
   ImageTextBlock = 'ProductFieldsProductInfoImageTextBlockLayout',
   ImageWithLightBoxBlock = 'ProductFieldsProductInfoImageWithLightBoxBlockLayout',
@@ -73,6 +73,12 @@ export interface ListBlockModel {
 
 export interface FreeTextBlockModel {
   fieldGroupName: ProductInfoBlockTypeEnum.FreeTextBlock;
+  label: string;
+  text: string;
+}
+
+export interface BlockTableModel {
+  fieldGroupName: ProductInfoBlockTypeEnum.BlockTable;
   label: string;
   text: string;
 }
