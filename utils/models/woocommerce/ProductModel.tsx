@@ -52,9 +52,7 @@ export interface ProductPartialModel {
 
 export enum ProductInfoBlockTypeEnum {
   ListBlock = 'ProductFieldsProductInfoListBlockLayout',
-  FreeTextBlock = 'ProductFieldsProductInfoFreeTextBlockLayout', // First model
-  FreeTextBlock2 = 'ProductFieldsProductInfoFreeTextBlock2Layout', // 2nd model
-  TableBlock = 'ProductFieldsProductInfoBlockTableLayout',
+  FreeTextBlock = 'ProductFieldsProductInfoFreeTextBlockLayout',
   EquationBlock = 'ProductFieldsProductInfoEquationBlockLayout',
   ImageTextBlock = 'ProductFieldsProductInfoImageTextBlockLayout',
   ImageWithLightBoxBlock = 'ProductFieldsProductInfoImageWithLightBoxBlockLayout',
@@ -73,12 +71,6 @@ export interface ListBlockModel {
 }
 
 export interface FreeTextBlockModel {
-  fieldGroupName: ProductInfoBlockTypeEnum.FreeTextBlock;
-  label: string;
-  text: string;
-}
-
-export interface FreeTextBlock2Model {  // Corrected second model name
   fieldGroupName: ProductInfoBlockTypeEnum.FreeTextBlock;
   label: string;
   text: string;
@@ -122,7 +114,6 @@ export interface ImageWithLightBoxBlockModel {
 export type ProductContentBlockTypes =
   | ListBlockModel
   | FreeTextBlockModel
-  | FreeTextBlock2Model  // Use the new second model correctly
   | EquationBlockModel
   | ImageTextBlockModel
   | ImageWithLightBoxBlockModel;
