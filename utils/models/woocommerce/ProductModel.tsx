@@ -53,6 +53,7 @@ export interface ProductPartialModel {
 export enum ProductInfoBlockTypeEnum {
   ListBlock = 'ProductFieldsProductInfoListBlockLayout',
   FreeTextBlock = 'ProductFieldsProductInfoFreeTextBlockLayout', // First model
+  FreeTextBlock2 = 'ProductFieldsProductInfoFreeTextBlock2Layout', // 2nd model
   TableBlock = 'ProductFieldsProductInfoBlockTableLayout',
   EquationBlock = 'ProductFieldsProductInfoEquationBlockLayout',
   ImageTextBlock = 'ProductFieldsProductInfoImageTextBlockLayout',
