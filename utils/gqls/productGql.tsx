@@ -99,11 +99,6 @@ const PRODUCT_GQL = `
         label
         text
       }
-      ... on ProductFieldsProductInfoFreeTextBlock2Layout {
-        fieldGroupName
-        label
-        text
-      }
       ... on ProductFieldsProductInfoEquationBlockLayout {
         fieldGroupName
         label
