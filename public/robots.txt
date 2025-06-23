@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Disallow: /_next
+
+# Host
+Host: https://capricare.kinsta.cloud
+
+# Sitemaps
+Sitemap: https://capricare.kinsta.cloud/sitemap.xml
+Sitemap: https://capricare.kinsta.cloud/sitemap-blog-posts.xml
+Sitemap: https://capricare.kinsta.cloud/sitemap-clinical-studies.xml
+Sitemap: https://capricare.kinsta.cloud/sitemap-products.xml
