@@ -53,8 +53,8 @@ export interface ProductPartialModel {
 export enum ProductInfoBlockTypeEnum {
   ListBlock = 'ProductFieldsProductInfoListBlockLayout',
   FreeTextBlock = 'ProductFieldsProductInfoFreeTextBlockLayout',
-TabelBlock = 'ProductFieldsProductInfoBlockTableLayout',
-EquationBlock = 'ProductFieldsProductInfoEquationBlockLayout',
+  TableBlock = 'ProductFieldsProductInfoBlockTableLayout', // Corrected identifier name
+  EquationBlock = 'ProductFieldsProductInfoEquationBlockLayout',
   ImageTextBlock = 'ProductFieldsProductInfoImageTextBlockLayout',
   ImageWithLightBoxBlock = 'ProductFieldsProductInfoImageWithLightBoxBlockLayout',
 }
