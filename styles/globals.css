@@ -48,9 +48,10 @@ a {
     local('AG Book Rounded Regular'),
     url('../assets/fonts/AGBookRounded-Regular.otf') format('opentype');
 }
-/* In your globals.css */
+/* In globals.css */
 .MuiTypography-root sup {
   vertical-align: super;
   font-size: smaller;
 }
+
 

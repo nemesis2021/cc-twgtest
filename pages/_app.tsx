@@ -57,15 +57,10 @@ interface MyAppProps extends AppProps {
   instagramSection: InstagramSectionModel;
 }
 
-// Create the theme with global typography settings for superscript
+// No need for the 'sup' customization here now
 const theme = createTheme({
   typography: {
-    allVariants: {
-      '& sup': {
-        verticalAlign: 'super', // Makes the ® symbol superscript
-        fontSize: 'smaller', // Makes the superscript smaller in size
-      },
-    },
+    // Global typography styles without the '& sup' selector
   },
 });
 
