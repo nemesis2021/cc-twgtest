@@ -25,6 +25,8 @@ import {
   STOCKISTS_PAGE,
 } from '../utils/routes';
 import SmoothScrollContainer from '../components/Animation/Parallax/SmoothScrollContainer';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
 
 const AppWrapper = dynamic(() => import('../components/AppWrapper'));
 const NavBar = dynamic(() => import('../components/Navigation/NavBar'));
@@ -55,6 +57,18 @@ interface MyAppProps extends AppProps {
   instagramSection: InstagramSectionModel;
 }
 
+const theme = createTheme({
+  typography: {
+    // Apply superscript globally to all Typography components where ® is used
+    allVariants: {
+      '& sup': {
+        verticalAlign: 'super',
+        fontSize: 'smaller',
+      },
+    },
+  },
+});
+
 function MyApp(props: MyAppProps) {
   const {
     Component,
@@ -81,22 +95,25 @@ function MyApp(props: MyAppProps) {
     instagramSection.visibility === 'Visible';
 
   return (
-    <AppWrapper emotionCache={emotionCache}>
-      <NavBar
-        menu={headerMenu}
-        logo={navigationContent?.logo}
-        headerContent={navigationContent?.headerContent}
-      />
-      <SmoothScrollContainer>
-        <Component {...pageProps} />
-        {shouldShowInstagram && <InstagramSection data={instagramSection} />}
-        <Footer
-          menu={footerMenu}
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <AppWrapper emotionCache={emotionCache}>
+        <NavBar
+          menu={headerMenu}
           logo={navigationContent?.logo}
-          footerContent={navigationContent?.footerContent}
+          headerContent={navigationContent?.headerContent}
         />
-      </SmoothScrollContainer>
-    </AppWrapper>
+        <SmoothScrollContainer>
+          <Component {...pageProps} />
+          {shouldShowInstagram && <InstagramSection data={instagramSection} />}
+          <Footer
+            menu={footerMenu}
+            logo={navigationContent?.logo}
+            footerContent={navigationContent?.footerContent}
+          />
+        </SmoothScrollContainer>
+      </AppWrapper>
+    </ThemeProvider>
   );
 }
 
